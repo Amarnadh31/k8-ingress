@@ -55,10 +55,10 @@ spec:
   - host: "app1.expensemind.online"
     http:
       paths:
-      - backend:
+      - pathType: Prefix
+        path: "/"
+        backend:
           service:
             name: app1
             port:
               number: 80
-        path: "/"
-        pathType: Prefix
